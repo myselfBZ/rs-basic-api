@@ -1,0 +1,15 @@
+[package]
+name = "basic-api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8"
+serde = { version = "1.0.229", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+
+[dependencies.uuid]
+version = "1.26.1"
+features = [
+    "v4",
+]
