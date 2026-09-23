@@ -9,7 +9,6 @@ pub struct MyState {
     pub users: HashMap<String, User>
 }
 
-
 impl MyState {
     pub async  fn new(pg_url: &str) -> Self {
         let conn = db::open_db_connection(pg_url).await.expect("failed to connect to database");

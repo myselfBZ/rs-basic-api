@@ -21,9 +21,7 @@ async fn main() {
         "93fc00cf-b5c2-4fdf-8a66-5bdd73ef51db".to_string(),
         User{id: "93fc00cf-b5c2-4fdf-8a66-5bdd73ef51db".to_string(), name: "Sarah".to_string()}
     );
-    let app_state = MyState{
-        users: users,
-    };
+    let app_state = MyState::new("postgresql://postgres:pass@localhost:5432/basic_api?sslmode=disable").await;
     let mu_shared = Mutex::new(app_state);
     let shared = Arc::new(mu_shared);
     let app = Router::new()
