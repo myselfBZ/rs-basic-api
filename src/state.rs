@@ -1,11 +1,11 @@
 use std::collections::HashMap;
-
+use crate::entities::User;
 use sqlx::PgPool;
 
-use crate::{db, response::User};
+use crate::db;
 
 pub struct MyState {
-    db: PgPool,
+    pub db: PgPool,
     pub users: HashMap<String, User>
 }
 

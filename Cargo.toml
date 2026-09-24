@@ -15,10 +15,12 @@ sqlx = { version = "0.9", features = [
         "sqlx-toml",
         "json",
         "chrono",
+        "uuid",
 ] }
 
 [dependencies.uuid]
 version = "1.26.1"
 features = [
     "v4",
+    "serde"
 ]
